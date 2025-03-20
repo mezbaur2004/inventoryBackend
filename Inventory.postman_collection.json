@@ -1,0 +1,1536 @@
+{
+	"info": {
+		"_postman_id": "a7c40775-c139-4a5d-8a24-60943628b953",
+		"name": "Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32470944"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mezbaur2004@gmail.com\",\r\n    \"firstName\": \"Mezbaur Are\",\r\n    \"lastName\": \"Rafi\",\r\n    \"mobile\": \"01539316169\",\r\n    \"password\": \"1234\",\r\n    \"photo\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/registration",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mezbaur2004@gmail.com\",\r\n    \"password\":\"1111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/login",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"photo\":\"https://scontent.fcgp38-1.fna.fbcdn.net/v/t39.30808-6/471457452_1319857819381602_6973412464280517899_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=joTN3dybJSgQ7kNvgEJ9lRe&_nc_zt=23&_nc_ht=scontent.fcgp38-1.fna&_nc_gid=ACuBQ-izYF6StFBGL00vbCx&oh=00_AYDAs2EAAde9Y4v9JcDzdZBF3VL2ziE8Gdw2dFhFlb6S_Q&oe=677B8E83\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/profileUpdate",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"profileUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecoverVerifyEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/recoverVerifyEmail/mezbaur2004@gmail.com",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"recoverVerifyEmail",
+								"mezbaur2004@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecoverVerifyOTP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/recoverVerifyOTP/mezbaur2004@gmail.com/72118",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"recoverVerifyOTP",
+								"mezbaur2004@gmail.com",
+								"72118"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecoverResetPass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mezbaur2004@gmail.com\",\r\n    \"otp\":\"72118\",\r\n    \"password\":\"1111\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/recoverResetPass",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"recoverResetPass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProfileDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/profileDetails",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"profileDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brands",
+			"item": [
+				{
+					"name": "CreateBrand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Name\" :\"Razer\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createBrand",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBrand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Apple\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateBrand/6787eee6edbfb606508a50ba",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateBrand",
+								"6787eee6edbfb606508a50ba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BrandList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/brandList/1/3/a",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"brandList",
+								"1",
+								"3",
+								"a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BrandDropDown",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/brandDropDown",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"brandDropDown"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBrand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deleteBrand/6787f37cedbfb606508a50bf",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deleteBrand",
+								"6787f37cedbfb606508a50bf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BrandDetailsByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/brandDetailsByID/6787f46aedbfb606508a50c1",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"brandDetailsByID",
+								"6787f46aedbfb606508a50c1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "CreateCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Name\" :\"Keyboard\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createCategory",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Laptop\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateCategory/6788b5e1183555f8781286e4",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateCategory",
+								"6788b5e1183555f8781286e4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CategoryList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/categoryList/1/3/m",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"categoryList",
+								"1",
+								"3",
+								"m"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CategoryDropDown",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/categoryDropDown",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"categoryDropDown"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deleteCategory/6788b788183555f8781286ec",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deleteCategory",
+								"6788b788183555f8781286ec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerDetailsByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/customerDetailsByID/6788b972d6cfb2a8bd19d6e8",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"customerDetailsByID",
+								"6788b972d6cfb2a8bd19d6e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "CreateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Name\" :\"Rafiq7\",\r\n \"Phone\":\"01101938481\",\r\n \"Email\":\"mezbuarr2004@gmail.com\",\r\n \"Address\":\"2/4,Kaunia,Rangpur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createCustomer",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Name\" :\"Rafiq655\",\r\n \"Phone\":\"01101938480\",\r\n \"Enail\":\"mezbuarr2004@gmail.com\",\r\n \"Address\":\"2/4,Kaunia,Rangpur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateCustomer/6788b998d6cfb2a8bd19d6f2",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateCustomer",
+								"6788b998d6cfb2a8bd19d6f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/customerList/1/2/raf",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"customerList",
+								"1",
+								"2",
+								"raf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerDropDown",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/customerDropDown",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"customerDropDown"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/DeleteCustomer/6788b98bd6cfb2a8bd19d6ee",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"DeleteCustomer",
+								"6788b98bd6cfb2a8bd19d6ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CategoryDetailsByID Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/categoryDetailsByID/6788b5e1183555f8781286e4",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"categoryDetailsByID",
+								"6788b5e1183555f8781286e4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "CreateSupplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Name\" :\"StarTech4\",\r\n \"Phone\":\"01101938489\",\r\n \"Email\":\"mezbuarr2244@gmail.com\",\r\n \"Address\":\"2/4,Kaunia,Rangpur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createSupplier",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createSupplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSupplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Name\" :\"StarTech3\",\r\n \"Phone\":\"01101938489\",\r\n \"Email\":\"mezbuarr2244@gmail.com\",\r\n \"Address\":\"2/4,Kaunia,Rangpur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateSupplier/6788e268e692afee20bac4ed",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateSupplier",
+								"6788e268e692afee20bac4ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/supplierList/1/3/tech",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"supplierList",
+								"1",
+								"3",
+								"tech"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierDropDown",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/supplierDropDown",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"supplierDropDown"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSupplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deleteSupplier/6788e223e692afee20bac4e9",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deleteSupplier",
+								"6788e223e692afee20bac4e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierDetailsByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/supplierDetailsByID/6788e0c9e692afee20bac4d9",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"supplierDetailsByID",
+								"6788e0c9e692afee20bac4d9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Expense Type",
+			"item": [
+				{
+					"name": "CreateExpenseType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Name\" :\"exType10\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createExpenseType",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createExpenseType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateExpenseType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"Name\" :\"exType10updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateExpenseType/678e8e57e3bef81ab7a22024",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateExpenseType",
+								"678e8e57e3bef81ab7a22024"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExpenseTypeList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/ExpenseTypeList/1/3/ex",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"ExpenseTypeList",
+								"1",
+								"3",
+								"ex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExpenseTypeDropDown",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/ExpenseTypeDropDown",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"ExpenseTypeDropDown"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExpenseTypeDetailsByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/expenseTypeDetailsByID/678e8e1de3bef81ab7a22014",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"expenseTypeDetailsByID",
+								"678e8e1de3bef81ab7a22014"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteExpenseType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deleteExpenseTypes/678e8e57e3bef81ab7a22024",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deleteExpenseTypes",
+								"678e8e57e3bef81ab7a22024"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Expense",
+			"item": [
+				{
+					"name": "CreateExpense",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TypeID\":\"678e8e57e3bef81ab7a22024\",\r\n    \"Amount\":157541,\r\n    \"Notes\":\"just a note\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createExpense",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createExpense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateExpense",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TypeID\":\"678e8e57e3bef81ab7a22024\",\r\n    \"Amount\":100000,\r\n    \"Notes\":\"just a note(updated)\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateExpense/678fe192dd23dede5065e5ff",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateExpense",
+								"678fe192dd23dede5065e5ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExpenseList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/expenseList/1/3/0",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"expenseList",
+								"1",
+								"3",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteExpense",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deleteExpense/6797b9e703b4da4116ecaf06",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deleteExpense",
+								"6797b9e703b4da4116ecaf06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExpenseDetailsByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/expenseDetailsByID/678fe192dd23dede5065e5ff",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"expenseDetailsByID",
+								"678fe192dd23dede5065e5ff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "CreateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CategoryID\":\"6788b788183555f8781286ec\",\r\n    \"BrandID\":\"6787f46aedbfb606508a50c1\",\r\n    \"Name\":\"Razer Kraken Y\",\r\n    \"Unit\":\"piece\",\r\n    \"Details\":\"demo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createProduct",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CategoryID\":\"6788b788183555f8781286ec\",\r\n    \"BrandID\":\"6787f46aedbfb606508a50c1\",\r\n    \"Name\":\"Razer Kraken Y(used)\",\r\n    \"Unit\":\"piece\",\r\n    \"Details\":\"demo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/updateProduct/6791117a741649611e327692",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"updateProduct",
+								"6791117a741649611e327692"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/productList/1/3/mo",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"productList",
+								"1",
+								"3",
+								"mo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deleteProduct/6791117a741649611e327692",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deleteProduct",
+								"6791117a741649611e327692"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductDetailsByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/productDetailsByID/6791115d741649611e327678",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"productDetailsByID",
+								"6791115d741649611e327678"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductDropDown",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/productDropDown",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"productDropDown"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "CreatePurchase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Parent\":{\r\n        \"SupplierID\":\"6788e0c1e692afee20bac4d7\",\r\n        \"VatTax\":100,\r\n        \"Discount\":0,\r\n        \"OtherCost\":100,\r\n        \"ShippingCost\":100,\r\n        \"GrandTotal\":5000,\r\n        \"Note\":\"Note\"\r\n    },\r\n    \"Childs\":[\r\n        {\r\n            \"ProductID\":\"67911166741649611e32767a\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        },\r\n        {\r\n            \"ProductID\":\"67911167741649611e32767c\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        },\r\n        {\r\n            \"ProductID\":\"67911169741649611e32767e\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createPurchases",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createPurchases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurchaseList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/purchaseList/1/2/0",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"purchaseList",
+								"1",
+								"2",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePurchase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deletePurchase/67978fa990e8fd429139696a",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deletePurchase",
+								"67978fa990e8fd429139696a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurchaseDetailsByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/purchaseDetailsByID/67978fab90e8fd4291396970",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"purchaseDetailsByID",
+								"67978fab90e8fd4291396970"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sale",
+			"item": [
+				{
+					"name": "CreateSale",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Parent\":{\r\n        \"CustomerID\":\"6788b957d6cfb2a8bd19d6e4\",\r\n        \"VatTax\":100,\r\n        \"Discount\":0,\r\n        \"OtherCost\":100,\r\n        \"ShippingCost\":100,\r\n        \"GrandTotal\":5000,\r\n        \"Note\":\"Note\"\r\n    },\r\n    \"Childs\":[\r\n        {\r\n            \"ProductID\":\"67911166741649611e32767a\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        },\r\n        {\r\n            \"ProductID\":\"67911167741649611e32767c\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        },\r\n        {\r\n            \"ProductID\":\"67911169741649611e32767e\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createSales",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createSales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurchaseList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/saleList/1/2/0",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"saleList",
+								"1",
+								"2",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSale",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deleteSale/679694e8a8ed6b86459a60c6",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deleteSale",
+								"679694e8a8ed6b86459a60c6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Return",
+			"item": [
+				{
+					"name": "CreateReturn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Parent\":{\r\n        \"CustomerID\":\"6788b957d6cfb2a8bd19d6e4\",\r\n        \"VatTax\":100,\r\n        \"Discount\":0,\r\n        \"OtherCost\":100,\r\n        \"ShippingCost\":100,\r\n        \"GrandTotal\":5000,\r\n        \"Note\":\"Note\"\r\n    },\r\n    \"Childs\":[\r\n        {\r\n            \"ProductID\":\"67911166741649611e32767a\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        },\r\n        {\r\n            \"ProductID\":\"67911167741649611e32767c\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        },\r\n        {\r\n            \"ProductID\":\"67911169741649611e32767e\",\r\n            \"Qty\":1,\r\n            \"UnitCost\":100,\r\n            \"Total\":100\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/createReturns",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"createReturns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReturnList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/returnList/1/2/0",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"returnList",
+								"1",
+								"2",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteReturn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/deleteReturn/67969526a8ed6b86459a60d8",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"deleteReturn",
+								"67969526a8ed6b86459a60d8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "ExpenseByDate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FromDate\":\"2025-01-10T00:00:00.000+00:00\",\r\n    \"ToDate\":\"2025-02-01T00:00:00.000+00:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/expenseByDate",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"expenseByDate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurchaseByDate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FromDate\":\"2025-01-10T00:00:00.000+00:00\",\r\n    \"ToDate\":\"2025-02-01T00:00:00.000+00:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/purchaseByDate",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"purchaseByDate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "returnByDate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FromDate\":\"2025-01-10T00:00:00.000+00:00\",\r\n    \"ToDate\":\"2025-02-01T00:00:00.000+00:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/returnByDate",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"returnByDate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaleByDate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FromDate\":\"2025-01-10T00:00:00.000+00:00\",\r\n    \"ToDate\":\"2025-02-01T00:00:00.000+00:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/saleByDate",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"saleByDate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Summary",
+			"item": [
+				{
+					"name": "ExpenseSummary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/expenseSummary",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"expenseSummary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReturnSummary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/returnSummary",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"returnSummary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurchaseSummary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/purchaseSummary",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"purchaseSummary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaleSummary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/saleSummary",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"saleSummary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "http://localhost:3030/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzg3ODU1MTUsImRhdGEiOiJtZXpiYXVyMjAwNEBnbWFpbC5jb20iLCJpYXQiOjE3Mzc5MjE1MTV9.F66sgpUuBIIntx8BySPoRk5_BGi3Vcjnv1nUg5m0bqs",
+			"type": "string"
+		}
+	]
+}
