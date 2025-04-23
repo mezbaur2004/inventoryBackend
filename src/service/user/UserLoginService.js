@@ -1,16 +1,24 @@
-const CreateToken=require("../../utility/CreateToken");
+const CreateToken = require("../../utility/CreateToken");
 
-const UserLoginService=async (Request,DataModel)=>{
-    try{
-        let data=await DataModel.aggregate([{$match:Request.body},{$project:{_id:0,email:1,firstName:1,lastName:1,lastName:1,mobile:1,photo:1}}]);
-        if(data.length>0){
-            let token=await CreateToken(data[0]['email']);
-            return {status:"success",token:token,data:data[0]};
-        }else{
-            return {status:"unauthorized"}
+const UserLoginService = async (Request, DataModel) => {
+    try {
+        let user = await DataModel.findOne({ email: Request.body.email });
+
+        if (!user) {
+            return { status: "unauthorized", message: "User not found" };
         }
-    }catch(error){
-        return {status : "fail", data:error.toString()};
+
+        // Manually check if the provided password matches the stored password
+        if (user.password !== Request.body.password) {
+            return { status: "unauthorized", message: "Incorrect password" };
+        }
+
+        let token = await CreateToken(user.email);
+        return { status: "success", token: token, data: user };
+
+    } catch (error) {
+        return { status: "fail", data: error.toString() };
     }
-}
-module.exports=UserLoginService;
+};
+
+module.exports = UserLoginService;

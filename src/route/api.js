@@ -82,17 +82,17 @@ router.get("/productDetailsByID/:id",AuthMiddleware,ProductController.ProductDet
 router.get("/productDropDown",AuthMiddleware,ProductController.ProductDropDown);
 
 //Purchases
-router.post("/createPurchases",AuthMiddleware,PurchaseController.CreatePurchases);
+router.post("/createPurchase",AuthMiddleware,PurchaseController.CreatePurchases);
 router.get("/purchaseList/:pageNo/:perPage/:searchKeyword",AuthMiddleware,PurchaseController.PurchaseList);
 router.get("/deletePurchase/:id",AuthMiddleware,PurchaseController.DeletePurchase);
 
 //Sales
-router.post("/createSales",AuthMiddleware,SalesController.CreateSales);
+router.post("/createSale",AuthMiddleware,SalesController.CreateSales);
 router.get("/saleList/:pageNo/:perPage/:searchKeyword",AuthMiddleware,SalesController.SaleList);
 router.get("/deleteSale/:id",AuthMiddleware,SalesController.DeleteSale);
 
 //Returns
-router.post("/createReturns",AuthMiddleware,ReturnsController.CreateReturns);
+router.post("/createReturn",AuthMiddleware,ReturnsController.CreateReturns);
 router.get("/returnList/:pageNo/:perPage/:searchKeyword",AuthMiddleware,ReturnsController.ReturnList);
 router.get("/deleteReturn/:id",AuthMiddleware,ReturnsController.DeleteReturn);
 

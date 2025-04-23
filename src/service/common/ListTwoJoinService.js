@@ -2,7 +2,7 @@ const ListTwoJoinService = async (Request,DataModel,SearchArray,JoinStage1,JoinS
     try {
         let pageNo=Number(Request.params.pageNo);
         let perPage=Number(Request.params.perPage);
-        let searchValue=Number(Request.params.searchKeyword);
+        let searchValue=Request.params.searchKeyword;
         let UserEmail=Request.headers['email'];
         let skipRow=(pageNo-1)*perPage;
         let data;
