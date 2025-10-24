@@ -17,8 +17,16 @@ const mongoose=require('mongoose');
 
 app.use(cookieParser());
 
-//Security Middleware Lib Implement
-app.use(cors({ origin: "*" }));
+const origins=process.env.ORIGIN.split(",");
+
+const corsOptions={
+    origin:origins,
+    methods:['GET','POST','PUT','DELETE'],
+    credentials:false
+}
+
+app.use(cors(corsOptions));
+
 app.use(helmet({
     contentSecurityPolicy: false, // Disable Helmet's default CSP
 }));
@@ -29,12 +37,8 @@ app.use(hpp());
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb', extended: true}));
 
-const limiter= rateLimit({windowMs:15*60*1000,max:3000})
+const limiter= rateLimit({windowMs:2*60*1000,max:300})
 app.use(limiter);
-
-//body parser implement
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
 
 let URL=process.env.URL
 let option={user:'',pass:"",autoIndex:true};
@@ -48,20 +52,8 @@ app.set('etag', false);
 
 app.use("/api",router);
 
-//undefined route implement
 app.use("*",(req,res)=>{
     res.status(404).json({status:"fail",data:"not found(wrong route)"})
 });
-
-//app.use(express.static('client/dist'));
-
-
-// Add React Front End Routing
-
-//app.get('*',function (req,res) {
-//   res.sendFile(path.resolve(__dirname,'client','dist','index.html'))
-//})
-
-
 
 module.exports=app;
