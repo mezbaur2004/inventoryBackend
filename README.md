@@ -2,12 +2,12 @@
 
 This is the backend for the **Inventory Management System**, built with **Express.js** and **MongoDB**. It provides a clean, modular, and scalable API for managing products, users, and orders.
 
-**Test Account Access:**
-- Username: `mezbaur2004@gmail.com`
-- Password: `abc123`
+**Demo account:** [to be added: a dedicated demo login for the live app]
 
 
-This application allows users to **manage products, suppliers, and orders efficiently**. Data consistency and integrity are maintained by implementing proper relationships between different entities in the database.
+It manages products, brands, categories, suppliers, customers, purchases, sales, returns and expenses, with date-range reports and OTP password recovery.
+
+**Data integrity:** a purchase, sale or return is a parent document plus its line items in a separate collection. Both are written, and deleted, inside one MongoDB transaction (`src/service/common/CreateParentChildsService.js`, `DeleteParentChildsService.js`), so a failure never leaves a sale without its items or items without their sale. Deleting a brand, category, customer, supplier, product or expense type that other records still reference is refused (`CheckAssociateService.js`).
 
 ## ✨ Features
 
@@ -46,11 +46,13 @@ cd inventoryBackend
 npm install
 ```
 
-3. Start the development server:
+3. Start the development server (restarts on file changes):
 
 ```
 npm run dev
 ```
+
+   Or run it once with `npm start`.
 
 The server will start on the port specified in `.env` (default `8080`). You can now connect your frontend or test endpoints with Postman.
 

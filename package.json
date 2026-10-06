@@ -1,9 +1,11 @@
 {
-  "name": "structure",
+  "name": "inventory-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,7 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.3",
-    "build": "^0.1.4",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -23,8 +24,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",
     "nodemailer": "^6.9.16",
-    "nodemon": "^3.1.0",
-    "package-name": "^0.1.0",
     "xss-clean": "^0.1.4"
   }
 }
