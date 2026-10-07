@@ -2,7 +2,7 @@
 
 This is the backend for the **Inventory Management System**, built with **Express.js** and **MongoDB**. It provides a clean, modular, and scalable API for managing products, users, and orders.
 
-**Demo account:** [to be added: a dedicated demo login for the live app]
+**Try it:** register an account on the live app. Each account sees only its own data.
 
 
 It manages products, brands, categories, suppliers, customers, purchases, sales, returns and expenses, with date-range reports and OTP password recovery.
